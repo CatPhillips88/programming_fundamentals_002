@@ -27,8 +27,6 @@ function countBooks() {
 }
 
 function checkBook(book) {
-  
-
   for (let i = 0; i < catalogue.length; i++) {
     if (catalogue[i] === book) {
       return true
@@ -40,7 +38,6 @@ function checkBook(book) {
 function countBooksByFirstLetter(letter) {
   let count = 0
   for (let i = 0; i < catalogue.length; i++) {
-
     let word = catalogue[i]
     if (word.charAt(0).toUpperCase() === letter.toUpperCase()) {
       count++
@@ -58,7 +55,6 @@ function countBooksByKeyword(keyword) {
     }
   }
   return count
-
 }
 
 function getBooksByAuthor(author) {
