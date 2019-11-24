@@ -23,23 +23,53 @@ const catalogue = [
 ];
 
 function countBooks() {
-  // Your code here
+  return catalogue.length
 }
 
 function checkBook(book) {
-  // Your code here
+  
+
+  for (let i = 0; i < catalogue.length; i++) {
+    if (catalogue[i] === book) {
+      return true
+    }
+  } return false
+
 }
 
 function countBooksByFirstLetter(letter) {
-  // Your code here
+  let count = 0
+  for (let i = 0; i < catalogue.length; i++) {
+
+    let word = catalogue[i]
+    if (word.charAt(0).toUpperCase() === letter.toUpperCase()) {
+      count++
+    }
+  }
+  return count
 }
 
 function countBooksByKeyword(keyword) {
-  // Your code here
+  let count = 0
+  for (let i = 0; i < catalogue.length; i++) {
+    let string = catalogue[i].toUpperCase();
+    if (string.includes(keyword.toUpperCase())) {
+      count++
+    }
+  }
+  return count
+
 }
 
 function getBooksByAuthor(author) {
-  // Your code here
+  let bookAuthor = []
+  for (let i = 0; i < catalogue.length; i++) {
+    let string = catalogue[i]
+    if (string.includes(author)) {
+      bookAuthor.push(string)
+    }
+  }
+  return bookAuthor
 }
 
 module.exports = {
